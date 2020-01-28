@@ -1,18 +1,19 @@
 body {
   margin: 0;
-  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .header {
   width: 100%;
   background-color: white;
   overflow: auto;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 .header a.logo {
   color: black;
   font-size: 28px;
   overflow: hidden;
-  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 .header a {
@@ -28,45 +29,39 @@ body {
 .menu-right {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
 }
 .menu-right .button {
   background-color: #ff4081;
   color: white;
-  box-shadow: none;
-  text-transform: none;
   font-weight: 600;
   line-height: 42px;
   font-size: 14px;
   height: 42px;
   padding: 0 22px;
   border-radius: 20px;
-  text-decoration: none;
   text-align: center;
   border: none;
+  cursor: pointer;
+  margin: 5px;
 }
 .menu-right .dropdown {
   background-color: #9c27b0;
   color: white;
-  box-shadow: none;
-  text-transform: none;
   font-weight: 600;
   line-height: 42px;
   font-size: 14px;
   height: 42px;
-  align-self: center;
   padding: 0 22px;
   border-radius: 20px;
-  border: none;
   text-align: center;
+  cursor: pointer;
+  border: none;
+  margin: 5px;
 }
 .menu-right .dropdown-btn .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
 }
 .menu-right .dropdown-btn .dropdown-content a {
   float: none;
@@ -88,6 +83,7 @@ body {
   font-weight: normal;
   font-style: normal;
   line-height: 1;
+  margin: 5px;
 
 }
 @media screen and (max-width: 500px) {
