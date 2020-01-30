@@ -29,6 +29,7 @@ body {
 .menu-right {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: nowrap;
 }
 .menu-right .button {
   background-color: #ff4081;
@@ -84,7 +85,22 @@ body {
   font-style: normal;
   line-height: 1;
   margin: 5px;
-
+}
+mat-drawer-content {
+  padding: 5px;
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  flex-wrap: nowrap;
+}
+mat-drawer {
+  position: fixed;
+  width: 200px;
+  top: 0;
+  margin: 0;
+  height: calc(100% + 60px);
+  padding-bottom: 60px;
+  background-color: #fff;
 }
 @media screen and (max-width: 500px) {
   .header a {
