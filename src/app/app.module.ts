@@ -8,6 +8,8 @@ import { FiltersComponent } from './main/filters/filters.component';
 import { BodyComponent } from './main/body/body.component';
 import { OffersComponent } from './main/body/offers/offers.component';
 import { MapComponent } from './main/body/map/map.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
     declarations: [
@@ -20,7 +22,9 @@ import { MapComponent } from './main/body/map/map.component';
         MapComponent
     ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
