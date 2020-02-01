@@ -1,7 +1,19 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.0/css/all.css">
 
 <mat-sidenav-container class="menu-container" [hasBackdrop]="true">
-  <mat-sidenav #drawer mode="over">I'm a drawer</mat-sidenav>
+  <mat-sidenav #drawer mode="over" position="end">
+    <mat-toolbar>justjoinIT</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#"><i class="fas fa-briefcase"></i>Employer Panel</a>
+      <a mat-list-item href="#"><i class="fab fa-facebook-f"></i>JustJoinIT</a>
+      <a mat-list-item href="#"><i class="fas fa-microphone"></i>Event</a>
+      <a mat-list-item href="#"><i class="fas fa-user-friends"></i>About us</a>
+      <a mat-list-item href="#"><i class="fas fa-rss"></i>RSS</a>
+      <a mat-list-item href="#"><i class="far fa-file-alt"></i>Terms</a>
+      <a mat-list-item href="#"><i class="far fa-file-alt"></i>Policy</a>
+      <a mat-list-item href="#"><i class="fas fa-envelope"></i>Contact info</a>
+    </mat-nav-list>
+  </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>
 <div class="header">

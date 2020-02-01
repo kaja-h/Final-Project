@@ -97,9 +97,6 @@ body {
   background-color: white;
 }
 .mat-sidenav {
-  position: fixed;
-  display: flex;
-  justify-content: flex-end;
   width: 300px;
   right: 0;
   height: 100%;
