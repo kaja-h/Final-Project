@@ -1,5 +1,9 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.0/css/all.css">
 
+<mat-sidenav-container class="menu-container" [hasBackdrop]="true">
+  <mat-sidenav #drawer mode="over">I'm a drawer</mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
 <div class="header">
   <a class="logo" href="#">justjoin.it</a>
   <div class="menu">
@@ -9,27 +13,25 @@
     <a href="#"><span><i class="fas fa-business-time"></i> Matchmaking</span></a>
   </div>
   <div class="menu-right">
+    <div class="btn btn-rounded">
+      <button class="button">Post a Job</button>
+    </div>
+    <div class="dropdown-btn">
+      <button class="dropdown">Sign in <i class="fas fa-chevron-down"></i></button>
+      <div class="dropdown-content">
+        <a href="#">Sign in as Developer</a>
+        <a href="#">Sign in to Employer Panel</a>
+      </div>
+    </div>
     <div class="hamburger-menu">
-      <mat-drawer-container class="menu-container" [hasBackdrop]="true">
-        <mat-drawer #drawer mode="over">I'm a drawer</mat-drawer>
-        <mat-drawer-content>
-          <div class="btn btn-rounded">
-            <button class="button">Post a Job</button>
-          </div>
-          <div class="dropdown-btn">
-            <button class="dropdown">Sign in <i class="fas fa-chevron-down"></i></button>
-            <div class="dropdown-content">
-              <a href="#">Sign in as Developer</a>
-              <a href="#">Sign in to Employer Panel</a>
-            </div>
-          </div>
           <a href="#" class="hamburger" (click)="drawer.toggle()"><i class="fas fa-bars"></i></a>
-        </mat-drawer-content>
-      </mat-drawer-container>
     </div>
   </div>
-
 </div>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
 
 

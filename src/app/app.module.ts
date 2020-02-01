@@ -10,6 +10,7 @@ import { OffersComponent } from './main/body/offers/offers.component';
 import { MapComponent } from './main/body/map/map.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
