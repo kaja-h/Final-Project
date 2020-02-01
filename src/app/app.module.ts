@@ -11,6 +11,7 @@ import { MapComponent } from './main/body/map/map.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
