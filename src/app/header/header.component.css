@@ -102,6 +102,18 @@ body {
   height: 100%;
   background-color: white;
 }
+.mat-sidenav .mat-toolbar {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+i {
+  margin-right: 10px;
+}
+.mat-list-item {
+  font-size: 18px;
+  color: #535353;
+}
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
