@@ -1,11 +1,24 @@
+<mat-drawer-container>
 <div class="form-employer">
   <div class="header">justjoin.it</div>
+  <div class="email">
+    <mat-icon>email</mat-icon>
   <mat-form-field>
     <input matInput placeholder="Email">
   </mat-form-field>
-
+  </div>
+  <div class="password">
+    <mat-icon>lock</mat-icon>
   <mat-form-field>
-    <textarea matInput placeholder="Password"></textarea>
+    <input matInput placeholder="Password">
   </mat-form-field>
-
+  </div>
+  <br>
+  <mat-checkbox>Remember Me</mat-checkbox>
+  <button mat-button>SIGN IN</button>
 </div>
+  <div class="forgot">
+    <br>
+    <a href="#">Forgot password?</a>
+  </div>
+</mat-drawer-container>

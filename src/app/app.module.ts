@@ -21,6 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from "@angular/material/icon";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 @NgModule({
     declarations: [
@@ -46,7 +48,9 @@ import {MatInputModule} from '@angular/material/input';
     AppRoutingModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
