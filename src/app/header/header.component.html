@@ -32,7 +32,8 @@
       <button class="dropdown" mat-button [matMenuTriggerFor]="menu">Sign in <i class="fas fa-chevron-down"></i></button>
       <mat-menu #menu="matMenu">
         <div class="dropdown-content">
-          <a href="#"><button mat-menu-item><i class="far fa-smile"></i>Sign in as Developer</button></a>
+          <button mat-menu-item routerLinkActive="active"><a routerLink="/devs">
+            <i class="far fa-smile"></i>Sign in as Developer</a></button>
           <button mat-menu-item routerLinkActive="active"><a routerLink="/users">
             <i class="fas fa-briefcase"></i>Sign in to Employer Panel</a></button>
         </div>
