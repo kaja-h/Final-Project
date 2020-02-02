@@ -11,7 +11,13 @@ import { MapComponent } from './main/body/map/map.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatListModule} from "@angular/material/list";
+import {MatListModule} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+import { AuthEmployerComponent } from './auth-employer/auth-employer.component';
+import { AuthDeveloperComponent } from './auth-developer/auth-developer.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
     declarations: [
@@ -21,14 +27,20 @@ import {MatListModule} from "@angular/material/list";
         FiltersComponent,
         BodyComponent,
         OffersComponent,
-        MapComponent
+        MapComponent,
+        AuthEmployerComponent,
+        AuthDeveloperComponent
     ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatButtonModule,
+    MatMenuModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
