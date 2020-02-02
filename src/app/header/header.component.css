@@ -63,24 +63,11 @@ body {
   border: none;
   margin: 5px;
 }
-.menu-right .dropdown-btn .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
+.mat-menu-item {
+  font-size: 17px;
 }
-.menu-right .dropdown-btn .dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
+a:link {
   text-decoration: none;
-  display: block;
-  text-align: left;
-}
-.menu-right .dropdown-btn .dropdown-content a:hover {
-  background-color: #ddd;
-}
-.menu-right .dropdown-btn:hover .dropdown-content {
-  display: block;
 }
 .menu-right .hamburger {
   font-size: 20px;
@@ -106,6 +93,8 @@ body {
   font-weight: bold;
   display: flex;
   justify-content: center;
+  cursor: pointer;
+  font-size: 27px;
 }
 i {
   margin-right: 10px;
