@@ -66,6 +66,9 @@ body {
 .mat-menu-item {
   font-size: 17px;
 }
+.mat-menu-item a {
+  color: black;
+}
 a:link {
   text-decoration: none;
 }

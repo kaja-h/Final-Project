@@ -1,1 +1,39 @@
-<p>auth-developer works!</p>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.0/css/all.css">
+
+<mat-drawer-container class="container" [hasBackdrop]="true">
+  <mat-drawer #menu2 mode="over" position="end">
+    <mat-toolbar>justjoin.it</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#"><i class="fas fa-briefcase"></i><span>Employer Panel</span></a>
+      <a mat-list-item href="https://www.facebook.com/JustJoinIT/" target="_blank"><i class="fab fa-facebook-f"></i>JustJoinIT</a>
+      <a mat-list-item href="https://event.justjoin.it/" target="_blank"><i class="fas fa-microphone"></i>Event</a>
+      <a mat-list-item href="https://justjoin.it/brands/story/just-join-it" target="_blank"><i class="fas fa-user-friends"></i>About us</a>
+      <a mat-list-item href="https://justjoin.it/feed.atom" target="_blank"><i class="fas fa-rss"></i>RSS</a>
+      <a mat-list-item href="https://justjoin.it/terms-and-privacy-policies" target="_blank"><i class="far fa-file-alt"></i>Terms</a>
+      <a mat-list-item href="https://justjoin.it/terms-and-privacy-policies" target="_blank"><i class="far fa-file-alt"></i>Policy</a>
+      <a mat-list-item href="#"><i class="fas fa-envelope"></i>Contact info</a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar>
+      <div class="header2">
+        <a class="logo2">justjoin.it</a>
+      </div>
+      <div class="button-right">
+        <button mat-button (click)="menu2.toggle()"><mat-icon>menu</mat-icon></button>
+      </div>
+    </mat-toolbar>
+    <div class="left-side">
+      <div class="get-started">
+        <h1>Get started for free</h1>
+      </div>
+      <div class="social-buttons">
+        <button mat-button><i class="fab fa-google"></i>Sign in with Google</button>
+        <button mat-button><i class="fab fa-github"></i>Sign in with Github</button>
+        <br>
+        <span><button mat-button><i class="fab fa-linkedin"></i>Sign in with Linkedin</button></span>
+        <span><button mat-button><i class="fab fa-facebook-f"></i>Sign in with Facebook</button></span>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
