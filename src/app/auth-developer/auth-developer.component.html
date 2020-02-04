@@ -4,7 +4,7 @@
   <mat-drawer #menu2 mode="over" position="end">
     <mat-toolbar>justjoin.it</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#"><i class="fas fa-briefcase"></i><span>Employer Panel</span></a>
+      <a mat-list-item routerLink="/users"><i class="fas fa-briefcase"></i><span>Employer Panel</span></a>
       <a mat-list-item href="https://www.facebook.com/JustJoinIT/" target="_blank"><i class="fab fa-facebook-f"></i>JustJoinIT</a>
       <a mat-list-item href="https://event.justjoin.it/" target="_blank"><i class="fas fa-microphone"></i>Event</a>
       <a mat-list-item href="https://justjoin.it/brands/story/just-join-it" target="_blank"><i class="fas fa-user-friends"></i>About us</a>
@@ -17,10 +17,32 @@
   <mat-drawer-content>
     <mat-toolbar>
       <div class="header2">
-        <a class="logo2">justjoin.it</a>
-      </div>
-      <div class="button-right">
-        <button mat-button (click)="menu2.toggle()"><mat-icon>menu</mat-icon></button>
+        <a class="logo2" href="#">justjoin.it</a>
+        <div class="menu2">
+          <a href="#" class="active"><span><i class="fas fa-briefcase"></i>Job offers</span></a>
+          <a href="https://justjoin.it/brands" target="_blank"><span><i class="fas fa-city"></i>Brand Stories</span></a>
+          <a href="https://geek.justjoin.it/" target="_blank"><span><i class="far fa-newspaper"></i>Just Geek IT</span></a>
+          <a href="https://justjoin.it/devs/" target="_blank"><span><i class="fas fa-business-time"></i>Matchmaking</span></a>
+        </div>
+        <div class="menu-right2">
+          <div class="btn btn-rounded2">
+            <button mat-button>Post a Job</button>
+          </div>
+          <div class="dropdown-btn2">
+            <button class="dropdown2" mat-button [matMenuTriggerFor]="menu">Sign in <i class="fas fa-chevron-down"></i></button>
+            <mat-menu #menu="matMenu">
+              <div class="dropdown-content2">
+                <button mat-menu-item routerLinkActive="active"><a routerLink="/devs">
+                  <i class="far fa-smile"></i>Sign in as Developer</a></button>
+                <button mat-menu-item routerLinkActive="active"><a routerLink="/users">
+                  <i class="fas fa-briefcase"></i>Sign in to Employer Panel</a></button>
+              </div>
+            </mat-menu>
+          </div>
+          <div class="button-right">
+            <button mat-button (click)="menu2.toggle()"><mat-icon>menu</mat-icon></button>
+          </div>
+        </div>
       </div>
     </mat-toolbar>
     <div class="left-side">
@@ -34,6 +56,37 @@
         <span><button mat-button><i class="fab fa-linkedin"></i>Sign in with Linkedin</button></span>
         <span><button mat-button><i class="fab fa-facebook-f"></i>Sign in with Facebook</button></span>
       </div>
+      <div class="or-line">
+        <br>
+        <span>Or</span>
+      </div>
+      <div class="form">
+        <mat-drawer-container>
+            <div class="email">
+              <mat-icon>email</mat-icon>
+              <mat-form-field>
+                <input matInput placeholder="Email">
+              </mat-form-field>
+            </div>
+            <div class="password">
+              <mat-icon>lock</mat-icon>
+              <mat-form-field>
+                <input matInput placeholder="Password">
+              </mat-form-field>
+            </div>
+            <br>
+          <div class="buttons-rs">
+            <button mat-button>SIGN IN</button>
+          </div>
+          <h6>New account? <a href="#">Register</a></h6>
+          <div class="forgot">
+            <a href="#">Forgot password?</a>
+          </div>
+        </mat-drawer-container>
+      </div>
+    </div>
+    <div class="right-side">
+      <img src="https://images.pexels.com/photos/1150026/pexels-photo-1150026.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Coding">
     </div>
   </mat-drawer-content>
 </mat-drawer-container>

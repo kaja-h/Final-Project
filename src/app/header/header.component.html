@@ -4,7 +4,7 @@
   <mat-sidenav #drawer mode="over" position="end">
     <mat-toolbar>justjoin.it</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#"><i class="fas fa-briefcase"></i><span>Employer Panel</span></a>
+      <a mat-list-item routerLink="/users"><i class="fas fa-briefcase"></i><span>Employer Panel</span></a>
       <a mat-list-item href="https://www.facebook.com/JustJoinIT/" target="_blank"><i class="fab fa-facebook-f"></i>JustJoinIT</a>
       <a mat-list-item href="https://event.justjoin.it/" target="_blank"><i class="fas fa-microphone"></i>Event</a>
       <a mat-list-item href="https://justjoin.it/brands/story/just-join-it" target="_blank"><i class="fas fa-user-friends"></i>About us</a>
@@ -16,35 +16,34 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>
-<div class="header">
-  <a class="logo" href="#">justjoin.it</a>
-  <div class="menu">
-    <a href="#" class="active"><span><i class="fas fa-briefcase"></i>Job offers</span></a>
-    <a href="https://justjoin.it/brands" target="_blank"><span><i class="fas fa-city"></i>Brand Stories</span></a>
-    <a href="https://geek.justjoin.it/" target="_blank"><span><i class="far fa-newspaper"></i>Just Geek IT</span></a>
-    <a href="https://justjoin.it/devs/" target="_blank"><span><i class="fas fa-business-time"></i>Matchmaking</span></a>
-  </div>
-  <div class="menu-right">
-    <div class="btn btn-rounded">
-      <button class="button">Post a Job</button>
+      <div class="header">
+        <a class="logo" href="#">justjoin.it</a>
+    <div class="menu">
+      <a href="#" class="active"><span><i class="fas fa-briefcase"></i>Job offers</span></a>
+      <a href="https://justjoin.it/brands" target="_blank"><span><i class="fas fa-city"></i>Brand Stories</span></a>
+      <a href="https://geek.justjoin.it/" target="_blank"><span><i class="far fa-newspaper"></i>Just Geek IT</span></a>
+      <a href="https://justjoin.it/devs/" target="_blank"><span><i class="fas fa-business-time"></i>Matchmaking</span></a>
     </div>
-    <div class="dropdown-btn">
-      <button class="dropdown" mat-button [matMenuTriggerFor]="menu">Sign in <i class="fas fa-chevron-down"></i></button>
-      <mat-menu #menu="matMenu">
-        <div class="dropdown-content">
-          <button mat-menu-item routerLinkActive="active"><a routerLink="/devs">
-            <i class="far fa-smile"></i>Sign in as Developer</a></button>
-          <button mat-menu-item routerLinkActive="active"><a routerLink="/users">
-            <i class="fas fa-briefcase"></i>Sign in to Employer Panel</a></button>
+    <div class="menu-right">
+      <div class="btn btn-rounded">
+        <button mat-button>Post a Job</button>
+      </div>
+      <div class="dropdown-btn">
+        <button class="dropdown" mat-button [matMenuTriggerFor]="menu">Sign in <i class="fas fa-chevron-down"></i></button>
+        <mat-menu #menu="matMenu">
+          <div class="dropdown-content">
+            <button mat-menu-item routerLinkActive="active"><a routerLink="/devs">
+              <i class="far fa-smile"></i>Sign in as Developer</a></button>
+            <button mat-menu-item routerLinkActive="active"><a routerLink="/users">
+              <i class="fas fa-briefcase"></i>Sign in to Employer Panel</a></button>
+          </div>
+        </mat-menu>
+          </div>
+          <div class="hamburger-menu">
+            <button mat-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+          </div>
         </div>
-      </mat-menu>
-
-    </div>
-    <div class="hamburger-menu">
-          <a href="#" class="hamburger" (click)="drawer.toggle()"><i class="fas fa-bars"></i></a>
-    </div>
-  </div>
-</div>
+      </div>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
