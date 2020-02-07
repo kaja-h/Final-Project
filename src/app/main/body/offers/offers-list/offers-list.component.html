@@ -1,0 +1,23 @@
+<div class="offers" *ngFor="let offer of offers">
+  <div class="offer-item">
+    <div class="item">
+      <div class="company-logo">
+        <img [src]= "offer.logo" alt="{{ offer.name }}">
+      </div>
+      <div class="item-row">
+        <div class="first-line">
+          <span>{{ offer.name }}</span>
+          <div class="right-side">
+            <span>{{ offer.salary }}</span>
+            <span>{{ offer.age }}</span>
+          </div>
+        </div>
+        <div class="second-line">
+          <span>{{ offer.companyName }}</span>
+          <span>{{ offer.companyAddress }}</span>
+          <span>{{ offer.tags }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
