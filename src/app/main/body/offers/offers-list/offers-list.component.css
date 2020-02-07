@@ -1,0 +1,45 @@
+.offers {
+  padding: 0;
+  list-style-type: none;
+  background-color: #f3f6f8;
+  margin: 0;
+}
+.offers .offer-item {
+  width: 100%;
+  display: flex;
+}
+.offer-item .item {
+  display: flex;
+  text-decoration: none;
+  min-width: 0;
+  color: black;
+  height: 80px;
+  font-size: 11px;
+  align-items: center;
+  flex: 1;
+  /*background-color: white;*/
+}
+.offer-item .company-logo img {
+  height: 40px;
+  flex: 0 0 125px;
+  position: relative;
+}
+.offer-item .item-row {
+  width: 100%;
+  padding-right: 20px;
+}
+.offer-item .first-line {
+  color: #5a6371;
+  display: flex;
+  align-items: center;
+}
+.offer-item .first-line .right-side {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.offer-item .second-line {
+  display: flex;
+  margin: 6px 0 0 0;
+}
+

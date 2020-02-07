@@ -21,8 +21,10 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from "@angular/material/icon";
-import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatIconModule} from '@angular/material/icon';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { OffersListComponent } from './main/body/offers/offers-list/offers-list.component';
+import { OffersDetailsComponent } from './main/body/offers/offers-details/offers-details.component';
 
 @NgModule({
     declarations: [
@@ -34,7 +36,9 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
         OffersComponent,
         MapComponent,
         AuthEmployerComponent,
-        AuthDeveloperComponent
+        AuthDeveloperComponent,
+        OffersListComponent,
+        OffersDetailsComponent
     ],
   imports: [
     BrowserModule,
