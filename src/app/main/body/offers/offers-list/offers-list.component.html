@@ -2,7 +2,7 @@
   <div class="offer-item">
     <div class="item">
       <div class="company-logo">
-        <img [src]= "offer.logo" alt="{{ offer.name }}">
+        <img class="logo" [src]= "offer.logo" alt="{{ offer.name }}">
       </div>
       <div class="item-row">
         <div class="first-line">
@@ -13,9 +13,11 @@
           </div>
         </div>
         <div class="second-line">
-          <span>{{ offer.companyName }}</span>
-          <span>{{ offer.companyAddress }}</span>
-          <span>{{ offer.tags }}</span>
+          <span><i class="far fa-building"></i>  {{ offer.companyName }}</span>
+          <span class="address"><i class="fas fa-map-marker-alt"></i>  {{ offer.companyAddress }}</span>
+          <div class="right-tag">
+            <span class="tags">{{ offer.tags }}</span>
+          </div>
         </div>
       </div>
     </div>
