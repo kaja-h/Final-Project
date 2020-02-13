@@ -1,4 +1,4 @@
-<div class="offers" *ngFor="let offer of offers">
+<a class="offers" *ngFor="let offer of offers" href="#" (click)="onOfferSelected(offer)">
   <div class="offer-item">
     <div class="item">
       <div class="company-logo">
@@ -22,4 +22,5 @@
       </div>
     </div>
   </div>
-</div>
+</a>
+

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Offers} from '../offers.model';
 
 @Component({
@@ -7,6 +7,7 @@ import {Offers} from '../offers.model';
   styleUrls: ['./offers-list.component.css']
 })
 export class OffersListComponent implements OnInit {
+  @Output() offerWasSelected = new EventEmitter<Offers>();
   offers: Offers[] = [
     new Offers('DevOps Engineer', '8 000 - 15 000 PLN', 'New', 'Appliscale sp. z.o.o.', 'ul. Zyczkowskiego 14, Kraków',
       'chef/ansible/puppet', 'https://cdn.bulldogjob.com/system/companies/logos/000/001/379/thumb/appliscale_logo_dark.png'),
@@ -27,6 +28,10 @@ export class OffersListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onOfferSelected(offer: Offers) {
+    this.offerWasSelected.emit(offer);
   }
 
 }
