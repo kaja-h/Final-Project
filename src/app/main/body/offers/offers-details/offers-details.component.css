@@ -1,0 +1,15 @@
+.offer-details {
+  padding: 0 15px 15px 15px;
+}
+.offer-details .offer-header {
+  height: 235px;
+  position: relative;
+  margin: 0 0 80px 0;
+}
+.offer-details .background img {
+  height: 220px;
+  width: 570px;
+  border-radius: 0 0 4px 4px;
+  padding: 0;
+  background-size: cover;
+}
