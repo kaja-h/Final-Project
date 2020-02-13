@@ -30,6 +30,10 @@ body {
 .header span:hover {
   color:hotpink;
 }
+.menu .active {
+  color:hotpink;
+  cursor: pointer;
+}
 .menu-right {
   display: flex;
   justify-content: flex-end;
