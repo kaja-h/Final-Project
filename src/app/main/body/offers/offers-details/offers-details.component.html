@@ -1,8 +1,10 @@
 <div class="offer-details">
   <div class="offer-header">
     <div class="background">
-      <i class="fas fa-arrow-left"></i>
-      <i class="fas fa-share-alt"></i>
+      <div class="buttons">
+        <mat-icon class="back">arrow_back</mat-icon>
+        <mat-icon class="share">share</mat-icon>
+      </div>
       <div class="offer-header-row">
         <div class="circle-white">
           <div class="company-logo-container">
@@ -21,7 +23,7 @@
           </div>
         </div>
         <div class="apply-button">
-          <button mat-button><mat-icon>email</mat-icon>Apply</button>
+          <button mat-button><mat-icon class="email-icon">email</mat-icon>Apply</button>
         </div>
       </div>
     </div>
@@ -80,6 +82,37 @@
         <div class="title">
           Added
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="offer-details-content">
+    <div class="card-section">
+      <div class="card-section-title">
+        Tech stack
+      </div>
+      <div class="card-content skills">
+        <div class="skills-container">
+          <div class="skill-wrapper">
+            <div class="skill">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-section">
+      <div class="card-section-title">
+        Description
+      </div>
+      <div class="card-content description">
+        <span>{{ offer.description }}</span>
+      </div>
+    </div>
+    <div class="card-section apply section">
+      <div class="card-section-title">
+        Apply for the job
+      </div>
+      <div class="card-content">
+
       </div>
     </div>
   </div>
