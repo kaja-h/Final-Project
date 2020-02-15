@@ -11,10 +11,22 @@
         </div>
         <div class="offer-essential-info">
           <div class="salary-row">
-
+            <span class="salary2">{{ offer.salary }} {{ offer.salaryMonth }}</span>
+          </div>
+          <div class="offer-title-row">
+            <span>{{ offer.name }}</span>
+          </div>
+          <div class="offer-address">
+            <span>{{ offer.companyAddress }}</span>
           </div>
         </div>
+        <div class="apply-button">
+          <button mat-button><mat-icon>email</mat-icon>Apply</button>
+        </div>
       </div>
+    </div>
+    <div class="tiles">
+
     </div>
   </div>
 </div>

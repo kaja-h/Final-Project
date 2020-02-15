@@ -5,6 +5,7 @@
   height: 235px;
   position: relative;
   margin: 0 0 80px 0;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 .offer-details .background {
   background-color: #1676ff;
@@ -67,4 +68,34 @@
 }
 img {
   border: 0;
+}
+.offer-header .offer-essential-info {
+  margin: 0 0 0 55px;
+}
+.offer-header .offer-essential-info .salary-row {
+  font-size: 18px;
+  line-height: 24px;
+}
+.offer-header .offer-essential-info .offer-title-row {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.offer-header .offer-essential-info .offer-address {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.offer-header .offer-header-row .apply-button {
+  color: #448AFF;
+  margin: 0 15px 0 auto;
+  background-color: #fff;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+.offer-header .offer-header-row .apply-button .mat-icon {
+  margin: 0 5px 0 0;
+  font-size: 20px;
 }

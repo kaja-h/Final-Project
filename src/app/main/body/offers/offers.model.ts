@@ -6,8 +6,9 @@ export class Offers {
   public companyAddress: string;
   public tags: string;
   public logo: string;
+  public salaryMonth: string;
 
-  constructor(name: string, salary: string, age: string, companyName: string, companyAddress: string, tags: string, logo: string) {
+  constructor(name: string, salary: string, age: string, companyName: string, companyAddress: string, tags: string, logo: string, salaryMonth: string) {
     this.name = name;
     this.salary = salary;
     this.age = age;
@@ -15,5 +16,6 @@ export class Offers {
     this.companyAddress = companyAddress;
     this.tags = tags;
     this.logo = logo;
+    this.salaryMonth = salaryMonth;
   }
 }
