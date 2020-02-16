@@ -203,4 +203,63 @@ img {
 .skills-container .skill-wrapper .skill {
   position: relative;
 }
+.input-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+mat-drawer-container {
+  background-color: #fff;
+}
+.input-field {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 5px;
 
+}
+.input-field mat-form-field {
+  margin-left: 5px;
+  width: 330px;
+}
+.input-field .mat-icon {
+  margin-left: 20px;
+  color: rgba(0,0,0,.54);
+  margin-bottom: 15px;
+}
+.flex.row {
+  display: flex;
+}
+.row {
+  margin-left: auto;
+  margin-right: auto;
+}
+.input-field .textarea input {
+  height: 53px;
+}
+.processing {
+  margin-left: 20px;
+  color: #37474f;
+  font-weight: 400;
+}
+.processing span {
+  font-size: 11px;
+  color: #039be5;
+  cursor: pointer;
+}
+.button-apply {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+.button-apply button {
+  border: 1px solid #ff4081;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff4081;
+}
