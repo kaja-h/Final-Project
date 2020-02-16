@@ -112,7 +112,50 @@
         Apply for the job
       </div>
       <div class="card-content">
-
+        <mat-drawer-container>
+          <div class="row input-row">
+            <div class="input-field name">
+              <mat-icon class="person-name">person_outline</mat-icon>
+              <mat-form-field appearance="outline">
+                <mat-label>First & last name *</mat-label>
+                <input matInput placeholder="">
+              </mat-form-field>
+            </div>
+            <div class="input-field email">
+              <mat-icon class="email-letter">email</mat-icon>
+              <mat-form-field appearance="outline">
+                <mat-label>Email address *</mat-label>
+                <input matInput placeholder="">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row flex">
+            <div class="input-field introduction">
+              <mat-icon>create</mat-icon>
+              <div class="textarea">
+                <mat-form-field appearance="outline">
+                  <mat-label>Introduce yourself (linkedin/github links)</mat-label>
+                  <input matInput placeholder="">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="input-field CV">
+              <mat-icon>attachment</mat-icon>
+              <div class="textarea">
+                <mat-form-field appearance="outline">
+                  <mat-label>Upload CV (.pdf)</mat-label>
+                  <input matInput placeholder="">
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="processing">
+            <mat-checkbox>Processing data in future recruitment <span>more</span></mat-checkbox>
+          </div>
+          <div class="button-apply">
+            <button mat-button>Apply <mat-icon>arrow_right</mat-icon></button>
+          </div>
+        </mat-drawer-container>
       </div>
     </div>
   </div>
