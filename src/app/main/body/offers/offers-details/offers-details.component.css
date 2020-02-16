@@ -192,16 +192,14 @@ img {
   flex-wrap: wrap;
   margin: 0 0 -20px 0;
 }
-.skills-container .skill-wrapper {
-  flex: 1 0 20%;
-  max-width: 20%;
-  margin: 0 0 20px 0;
-  display: flex;
-  padding: 0 5px;
-  justify-content: center;
-}
 .skills-container .skill-wrapper .skill {
   position: relative;
+}
+.skills-container .skill-wrapper .skill .skill-level {
+  margin-bottom: 10px;
+}
+.skills-container .skill-wrapper .skill .skill-name {
+  margin-bottom: 20px;
 }
 .input-row {
   display: flex;

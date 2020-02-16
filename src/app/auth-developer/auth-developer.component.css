@@ -2,65 +2,6 @@ body {
   margin: 0;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
-.mat-toolbar {
-  width: 100%;
-  padding: 0;
-  border: none;
-  background-color: white;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-}
-.header2 {
-  width: 100%;
-  overflow: auto;
-}
-.header2 a.logo2 {
-  color: black;
-  font-size: 28px;
-  overflow: hidden;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  margin-left: 20px;
-  cursor: pointer;
-}
-.header2 a {
-  float: left;
-  padding: 12px;
-  color: grey;
-  text-decoration: none;
-  font-size: 17px;
-}
-.header2 span:hover {
-  color:hotpink;
-}
-.button-right mat-icon {
-  margin-top: 10px;
-}
-.container {
-  height: 100%;
-}
-.mat-drawer-content {
-  background-color: white;
-}
-.mat-drawer {
-  width: 300px;
-  right: 0;
-  height: 100%;
-  background-color: white;
-}
-.mat-drawer .mat-toolbar {
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 27px;
-}
-i {
-  margin-right: 10px;
-}
-.mat-list-item {
-  font-size: 18px;
-  color: #535353;
-}
 .left-side {
   display: block;
   box-sizing: inherit;
@@ -86,11 +27,14 @@ i {
   height: 50px;
   width: 200px;
 }
+.social-buttons .mat-button i {
+  margin-right: 5px;
+}
 .form {
   width: 500px;
 }
 mat-drawer-container {
-  height: 350px;
+  height: 400px;
   background-color: white;
 }
 .form .mat-icon {
@@ -137,7 +81,7 @@ h6 a {
   display: block;
 }
 img {
-  height: 650px;
+  height: 700px;
   width: 720px;
 }
 .menu-right2 {

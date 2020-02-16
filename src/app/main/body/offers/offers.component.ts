@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Offers} from './offers.model';
 import {OffersService} from './offers.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-offers',
@@ -9,9 +9,8 @@ import {OffersService} from './offers.service';
   providers: [OffersService]
 })
 export class OffersComponent implements OnInit {
-  selectedOffer: Offers;
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }

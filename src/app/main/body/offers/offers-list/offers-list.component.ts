@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Offers} from '../offers.model';
 import {OffersService} from '../offers.service';
 
@@ -8,17 +8,12 @@ import {OffersService} from '../offers.service';
   styleUrls: ['./offers-list.component.css']
 })
 export class OffersListComponent implements OnInit {
-  @Output() offerWasSelected = new EventEmitter<Offers>();
-  offers: Offers[];
-
-  constructor(private offerService: OffersService) { }
+  @Input() offers: Offers[];
+  @Input() index: number;
+  constructor(private offersService: OffersService) {
+  }
 
   ngOnInit() {
-    this.offers = this.offerService.getOffers();
+    this.offers = this.offersService.getOffers();
   }
-
-  onOfferSelected(offer: Offers) {
-    this.offerWasSelected.emit(offer);
-  }
-
 }

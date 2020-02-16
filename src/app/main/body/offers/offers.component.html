@@ -1,2 +1,2 @@
-<app-offers-list (offerWasSelected)="selectedOffer = $event" [hidden]="selectedOffer"></app-offers-list>
-<app-offers-details *ngIf="selectedOffer" [offer]="selectedOffer"></app-offers-details>
+<app-offers-list *ngIf="router.url !== '/offers/0' && router.url !== '/offers/1' && router.url !== '/offers/2' && router.url !== '/offers/3' && router.url !== '/offers/4' && router.url !== '/offers/5' && router.url !== '/offers/6'"></app-offers-list>
+<router-outlet></router-outlet>
