@@ -11,8 +11,11 @@ export class Offers {
   public empType: string;
   public level: string;
   public description: string;
+  public requirement: string;
+  public reqLVL: string;
 
-  constructor(name: string, salary: string, age: string, companyName: string, companyAddress: string, tags: string, logo: string, salaryMonth: string, companySize: string, empType: string, level: string, description: string) {
+  // tslint:disable-next-line:max-line-length
+  constructor(name: string, salary: string, age: string, companyName: string, companyAddress: string, tags: string, logo: string, salaryMonth: string, companySize: string, empType: string, level: string, description: string, requirement: string, reqLVL: string) {
     this.name = name;
     this.salary = salary;
     this.age = age;
@@ -25,5 +28,7 @@ export class Offers {
     this.empType = empType;
     this.level = level;
     this.description = description;
+    this.requirement = requirement;
+    this.reqLVL = reqLVL;
   }
 }
