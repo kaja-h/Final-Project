@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  /*overflow-y: scroll;*/
 }
 .offer-item {
   cursor: pointer;
