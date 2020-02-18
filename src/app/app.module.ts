@@ -25,7 +25,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { OffersListComponent } from './main/body/offers/offers-list/offers-list.component';
 import { OffersDetailsComponent } from './main/body/offers/offers-details/offers-details.component';
-import {ScrollingModule} from "@angular/cdk/scrolling";
 
 @NgModule({
     declarations: [
@@ -55,8 +54,7 @@ import {ScrollingModule} from "@angular/cdk/scrolling";
         MatSelectModule,
         MatInputModule,
         MatIconModule,
-        MatCheckboxModule,
-        ScrollingModule
+        MatCheckboxModule
     ],
   providers: [],
   bootstrap: [AppComponent]
