@@ -1,5 +1,185 @@
 <div class="filters">
   <div class="cities">
-
+    <div class="all-button">
+      <button mat-button>All</button>
+    </div>
+    <div class="city-button">
+      <button mat-button>Warszawa</button>
+    </div>
+    <div class="city-button">
+      <button mat-button>Kraków</button>
+    </div>
+    <div class="city-button">
+      <button mat-button>Wrocław</button>
+    </div>
+    <div class="city-button">
+      <button mat-button>Poznań</button>
+    </div>
+    <div class="city-button">
+      <button mat-button>Trójmiasto</button>
+    </div>
+    <div class="city-button">
+      <button mat-button>Remote</button>
+    </div>
+    <div class="city-button">
+      <button mat-button>World</button>
+    </div>
+    <div class="city-dropdown">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_horiz</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Białystok</button>
+        <button mat-menu-item>Bielsko-Biała</button>
+        <button mat-menu-item>Bydgoszcz</button>
+        <button mat-menu-item>Częstochowa</button>
+        <button mat-menu-item>Gliwice</button>
+        <button mat-menu-item>Katowice</button>
+        <button mat-menu-item>Kielce</button>
+        <button mat-menu-item>Lublin</button>
+        <button mat-menu-item>Łódź</button>
+        <button mat-menu-item>Olsztyn</button>
+        <button mat-menu-item>Opole</button>
+        <button mat-menu-item>Toruń</button>
+        <button mat-menu-item>Rzeszów</button>
+        <button mat-menu-item>Szczecin</button>
+        <button mat-menu-item>Zielona Góra</button>
+      </mat-menu>
+    </div>
+    <div class="icons-right">
+      <div class="switch-day-night">
+        <mat-icon>wb_sunny</mat-icon>
+        <mat-slide-toggle></mat-slide-toggle>
+        <mat-icon>brightness_3</mat-icon>
+      </div>
+    </div>
+  </div>
+  <div class="technologies">
+    <div class="all-button">
+      <button mat-button>All</button>
+    </div>
+    <div class="technology">
+      <div class="tech js">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fab fa-js-square"></i></button>
+        </div>
+        <span class="text">JS</span>
+      </div>
+      <div class="tech html">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fab fa-html5"></i></button>
+        </div>
+        <span class="text">HTML</span>
+      </div>
+      <div class="tech php">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fab fa-php"></i></button>
+        </div>
+        <span class="text">PHP</span>
+      </div>
+      <div class="tech ruby">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fas fa-gem"></i></button>
+        </div>
+        <span class="text">Ruby</span>
+      </div>
+      <div class="tech python">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fab fa-python"></i></button>
+        </div>
+        <span class="text">Python</span>
+      </div>
+      <div class="tech java">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fab fa-java"></i></button>
+        </div>
+        <span class="text">Java</span>
+      </div>
+      <div class="tech net">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fab fa-neos"></i></button>
+        </div>
+        <span class="text">.Net</span>
+      </div>
+      <div class="tech scala">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fas fa-stream"></i></button>
+        </div>
+        <span class="text">Scala</span>
+      </div>
+      <div class="tech c">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fab fa-cuttlefish"></i></button>
+        </div>
+        <span class="text">C</span>
+      </div>
+      <div class="tech mobile">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fas fa-mobile-alt"></i></button>
+        </div>
+        <span class="text">Mobile</span>
+      </div>
+      <div class="tech testing">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fas fa-search"></i></button>
+        </div>
+        <span class="text">Testing</span>
+      </div>
+      <div class="tech devops">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fab fa-dochub"></i></button>
+        </div>
+        <span class="text">DevOps</span>
+      </div>
+      <div class="tech ux">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fas fa-pencil-alt"></i></button>
+        </div>
+        <span class="text">UX/UI</span>
+      </div>
+      <div class="tech pm">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fas fa-user-ninja"></i></button>
+        </div>
+        <span class="text">PM</span>
+      </div>
+      <div class="tech game">
+        <div class="tech-btn">
+          <button mat-icon-button><i class="fas fa-gamepad"></i></button>
+        </div>
+        <span class="text">Game</span>
+      </div>
+      <div class="tech-dropdown">
+        <button mat-icon-button [matMenuTriggerFor]="menu2">
+          <mat-icon>more_horiz</mat-icon>
+        </button>
+        <mat-menu #menu2="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Blockchain</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>voicemail</mat-icon>
+            <span>Security</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Data</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Golang</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>SAP</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Other</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
   </div>
 </div>
