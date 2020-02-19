@@ -25,6 +25,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { OffersListComponent } from './main/body/offers/offers-list/offers-list.component';
 import { OffersDetailsComponent } from './main/body/offers/offers-details/offers-details.component';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
     declarations: [
@@ -40,22 +41,23 @@ import { OffersDetailsComponent } from './main/body/offers/offers-details/offers
         OffersListComponent,
         OffersDetailsComponent
     ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MatSidenavModule,
-        MatToolbarModule,
-        MatListModule,
-        MatButtonModule,
-        MatMenuModule,
-        RouterModule,
-        AppRoutingModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        MatInputModule,
-        MatIconModule,
-        MatCheckboxModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatButtonModule,
+    MatMenuModule,
+    RouterModule,
+    AppRoutingModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatSlideToggleModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

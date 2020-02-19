@@ -1,8 +1,134 @@
 .filters {
   background-color: #f3f6f8;
-  padding: 0 40px 0 18px;
+  padding: 10px 40px 0 18px;
   height: 126px;
+}
+.filters .cities {
   display: flex;
   align-items: center;
+}
+.filters .all-button {
+  color: #fff;
+  background-color: #9c27b0;
+  text-transform: none;
+  height: 35px;
+  border-radius: 20px;
+}
+.filters .city-button {
+  background-color: #fff;
+  color: #777;
+  text-transform: none;
+  margin-left: 15px;
+  height: 35px;
+  border-radius: 20px;
+}
+.filters .city-dropdown {
+  margin-left: 15px;
+}
+.mat-menu-item {
+  padding: 1px 20px;
+  height: 33px;
+  text-align: center;
+}
+.icons-right {
+  margin-left: auto;
+}
+.filters .icons-right .switch-day-night {
+  display: flex;
+  color: #777;
+}
+.filters .icons-right .switch-day-night mat-slide-toggle {
+  margin: 0 3px 0 7px;
+}
+.filters .technologies {
+  display: flex;
+  margin-top: 15px;
+}
+.technologies .tech .tech-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.technologies .technology {
+  margin-right: 17px;
+}
+.technology {
+  display: block;
+  cursor: pointer;
+}
+.technology .tech {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  margin: 0 11px;
+}
+.technology .js {
+  background-color: #FFAF00;
+}
+.technology .tech i {
+  font-size: 20px;
+  text-align: center;
+}
+.technology .text {
+  font-size: 12px;
+  color: #99a1ab;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 3px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+.technology .html {
+  background-color: #FD5D21;
+}
+.technology .php {
+  background-color: #157CFC;
+}
+.technology .ruby {
+  background-color: #f44336;
+}
+.technology .python {
+  background-color: #1F5EB6;
+}
+.technology .java {
+  background-color: #F9597A;
+}
+.technology .net {
+  background-color: #4FA4FD;
+}
+.technology .scala {
+  background-color: #F1464C;
+}
+.technology .c {
+  background-color: #2FCFBB;
+}
+.technology .mobile {
+  background-color: #BA4A8D;
+}
+.technology .testing {
+  background-color: #65AF35;
+}
+.technology .devops {
+  background-color: #8166E0;
+}
+.technology .ux {
+  background-color: #ff9800;
+}
+.technology .pm {
+  background-color: #4db6ac;
+}
+.technology .game {
+  background-color: #ec407a;
+}
+.filters .tech-dropdown  {
+  /*margin-left: 15px;*/
+  /*margin-top: 5px;*/
+  /*padding-bottom: 20px;*/
+  align-self: center;
+  display: inline-block;
 }
 
