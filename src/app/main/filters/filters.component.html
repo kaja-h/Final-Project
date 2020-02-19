@@ -149,36 +149,41 @@
         </div>
         <span class="text">Game</span>
       </div>
-      <div class="tech-dropdown">
-        <button mat-icon-button [matMenuTriggerFor]="menu2">
-          <mat-icon>more_horiz</mat-icon>
+    </div>
+    <div class="tech-dropdown">
+      <button mat-icon-button [matMenuTriggerFor]="menu2">
+        <mat-icon>more_horiz</mat-icon>
+      </button>
+      <mat-menu #menu2="matMenu">
+        <button mat-menu-item>
+          <button mat-icon-button><i class="fab fa-btc"></i></button>
+          <span>Blockchain</span>
         </button>
-        <mat-menu #menu2="matMenu">
-          <button mat-menu-item>
-            <mat-icon>dialpad</mat-icon>
-            <span>Blockchain</span>
-          </button>
-          <button mat-menu-item>
-            <mat-icon>voicemail</mat-icon>
-            <span>Security</span>
-          </button>
-          <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            <span>Data</span>
-          </button>
-          <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            <span>Golang</span>
-          </button>
-          <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            <span>SAP</span>
-          </button>
-          <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            <span>Other</span>
-          </button>
-        </mat-menu>
+        <button mat-menu-item>
+          <button mat-icon-button><i class="fas fa-shield-alt"></i></button>
+          <span>Security</span>
+        </button>
+        <button mat-menu-item>
+          <button mat-icon-button><i class="fas fa-database"></i></button>
+          <span>Data</span>
+        </button>
+        <button mat-menu-item>
+          <button mat-icon-button><i class="far fa-smile-beam"></i></button>
+          <span>Golang</span>
+        </button>
+        <button mat-menu-item>
+          <button mat-icon-button><i class="fas fa-file-invoice"></i></button>
+          <span>SAP</span>
+        </button>
+        <button mat-menu-item>
+          <button mat-icon-button><i class="fas fa-laptop"></i></button>
+          <span>Other</span>
+        </button>
+      </mat-menu>
+    </div>
+    <div class="icons-right">
+      <div class="salary-btn">
+        <button mat-button><i class="fas fa-dollar-sign"></i> Salary <i class="fas fa-angle-down"></i></button>
       </div>
     </div>
   </div>

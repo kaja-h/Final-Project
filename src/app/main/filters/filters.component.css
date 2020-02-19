@@ -28,7 +28,6 @@
 .mat-menu-item {
   padding: 1px 20px;
   height: 33px;
-  text-align: center;
 }
 .icons-right {
   margin-left: auto;
@@ -51,10 +50,10 @@
   margin: 0 auto;
 }
 .technologies .technology {
-  margin-right: 17px;
+  margin-right: 10px;
 }
 .technology {
-  display: block;
+  display: inline-block;
   cursor: pointer;
 }
 .technology .tech {
@@ -124,11 +123,6 @@
 .technology .game {
   background-color: #ec407a;
 }
-.filters .tech-dropdown  {
-  /*margin-left: 15px;*/
-  /*margin-top: 5px;*/
-  /*padding-bottom: 20px;*/
-  align-self: center;
-  display: inline-block;
+.technologies .right .salary {
+  margin: 0 10px 0 0;
 }
-
