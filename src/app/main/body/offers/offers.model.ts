@@ -15,9 +15,9 @@ export class Offers {
   public reqLVL: string;
   public geo1: object;
   public geo2: object;
+  public picture: string;
 
-  // tslint:disable-next-line:max-line-length
-  constructor(name: string, salary: string, age: string, companyName: string, companyAddress: string, tags: string, logo: string, salaryMonth: string, companySize: string, empType: string, level: string, description: string, requirement: string, reqLVL: string, geo1: object, geo2: object) {
+  constructor(name: string, salary: string, age: string, companyName: string, companyAddress: string, tags: string, logo: string, salaryMonth: string, companySize: string, empType: string, level: string, description: string, requirement: string, reqLVL: string, geo1: object, geo2: object, picture: string) {
     this.name = name;
     this.salary = salary;
     this.age = age;
@@ -34,5 +34,6 @@ export class Offers {
     this.reqLVL = reqLVL;
     this.geo1 = geo1;
     this.geo2 = geo2;
+    this.picture = picture;
   }
 }
