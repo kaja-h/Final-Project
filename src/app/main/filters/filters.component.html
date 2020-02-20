@@ -29,21 +29,21 @@
         <mat-icon>more_horiz</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>Białystok</button>
-        <button mat-menu-item>Bielsko-Biała</button>
-        <button mat-menu-item>Bydgoszcz</button>
-        <button mat-menu-item>Częstochowa</button>
-        <button mat-menu-item>Gliwice</button>
-        <button mat-menu-item>Katowice</button>
-        <button mat-menu-item>Kielce</button>
-        <button mat-menu-item>Lublin</button>
-        <button mat-menu-item>Łódź</button>
-        <button mat-menu-item>Olsztyn</button>
-        <button mat-menu-item>Opole</button>
-        <button mat-menu-item>Toruń</button>
-        <button mat-menu-item>Rzeszów</button>
-        <button mat-menu-item>Szczecin</button>
-        <button mat-menu-item>Zielona Góra</button>
+          <button mat-menu-item>Białystok</button>
+          <button mat-menu-item>Bielsko-Biała</button>
+          <button mat-menu-item>Bydgoszcz</button>
+          <button mat-menu-item>Częstochowa</button>
+          <button mat-menu-item>Gliwice</button>
+          <button mat-menu-item>Katowice</button>
+          <button mat-menu-item>Kielce</button>
+          <button mat-menu-item>Lublin</button>
+          <button mat-menu-item>Łódź</button>
+          <button mat-menu-item>Olsztyn</button>
+          <button mat-menu-item>Opole</button>
+          <button mat-menu-item>Toruń</button>
+          <button mat-menu-item>Rzeszów</button>
+          <button mat-menu-item>Szczecin</button>
+          <button mat-menu-item>Zielona Góra</button>
       </mat-menu>
     </div>
     <div class="icons-right">
@@ -155,35 +155,56 @@
         <mat-icon>more_horiz</mat-icon>
       </button>
       <mat-menu #menu2="matMenu">
-        <button mat-menu-item>
-          <button mat-icon-button><i class="fab fa-btc"></i></button>
-          <span>Blockchain</span>
-        </button>
-        <button mat-menu-item>
-          <button mat-icon-button><i class="fas fa-shield-alt"></i></button>
-          <span>Security</span>
-        </button>
-        <button mat-menu-item>
-          <button mat-icon-button><i class="fas fa-database"></i></button>
-          <span>Data</span>
-        </button>
-        <button mat-menu-item>
-          <button mat-icon-button><i class="far fa-smile-beam"></i></button>
-          <span>Golang</span>
-        </button>
-        <button mat-menu-item>
-          <button mat-icon-button><i class="fas fa-file-invoice"></i></button>
-          <span>SAP</span>
-        </button>
-        <button mat-menu-item>
-          <button mat-icon-button><i class="fas fa-laptop"></i></button>
-          <span>Other</span>
-        </button>
+        <div class="tech-items">
+          <button mat-menu-item>
+            <button mat-icon-button><i class="fab fa-btc"></i></button>
+            <span>Blockchain</span>
+          </button>
+          <button mat-menu-item>
+            <button mat-icon-button><i class="fas fa-shield-alt"></i></button>
+            <span>Security</span>
+          </button>
+          <button mat-menu-item>
+            <button mat-icon-button><i class="fas fa-database"></i></button>
+            <span>Data</span>
+          </button>
+          <button mat-menu-item>
+            <button mat-icon-button><i class="far fa-smile-beam"></i></button>
+            <span>Golang</span>
+          </button>
+          <button mat-menu-item>
+            <button mat-icon-button><i class="fas fa-file-invoice"></i></button>
+            <span>SAP</span>
+          </button>
+          <button mat-menu-item>
+            <button mat-icon-button><i class="fas fa-laptop"></i></button>
+            <span>Other</span>
+          </button>
+        </div>
       </mat-menu>
     </div>
     <div class="icons-right">
-      <div class="salary-btn">
-        <button mat-button><i class="fas fa-dollar-sign"></i> Salary <i class="fas fa-angle-down"></i></button>
+      <div class="btn salary-btn">
+        <button mat-button [matMenuTriggerFor]="menu3"><i class="fas fa-dollar-sign"></i> Salary <i class="fas fa-angle-down"></i></button>
+        <mat-menu #menu3="matMenu">
+          <div class="menu-items">
+            <span class="text-slider">Choose salary range</span>
+            <div class="slider">
+              <mat-slider min="0" max="150" [thumbLabel]="true"></mat-slider>
+            </div>
+          </div>
+        </mat-menu>
+      </div>
+      <div class="btn explvl">
+        <button mat-button [matMenuTriggerFor]="menu4"><i class="fas fa-location-arrow"></i> Exp. level <i class="fas fa-angle-down"></i></button>
+        <mat-menu #menu4="matMenu">
+          <div class="exp-items">
+            <button mat-menu-item>All</button>
+            <button mat-menu-item>Junior</button>
+            <button mat-menu-item>Mid</button>
+            <button mat-menu-item>Senior</button>
+          </div>
+        </mat-menu>
       </div>
     </div>
   </div>

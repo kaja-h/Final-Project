@@ -28,6 +28,7 @@
 .mat-menu-item {
   padding: 1px 20px;
   height: 33px;
+  text-align: center;
 }
 .icons-right {
   margin-left: auto;
@@ -123,6 +124,30 @@
 .technology .game {
   background-color: #ec407a;
 }
-.technologies .right .salary {
+.technologies .icons-right .btn {
   margin: 0 10px 0 0;
+  background-color: #fff;
+  color: #777;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 20px;
+  display: inline-block;
 }
+.technologies .icons-right .btn i {
+  margin: 0 4px;
+}
+span.text-slider {
+  color: #37474f;
+  font-weight: 400;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  padding-left: 5px;
+}
+.menu-items {
+  width: 215px;
+}
+.mat-slider{
+  width: 200px;
+  height: 50px;
+}
+
