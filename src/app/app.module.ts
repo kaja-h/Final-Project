@@ -28,6 +28,8 @@ import { OffersDetailsComponent } from './main/body/offers/offers-details/offers
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatSliderModule} from "@angular/material/slider";
 import { BrandsComponent } from './brands/brands.component';
+import { BrandsListComponent } from './brands/brands-list/brands-list.component';
+import { BrandsDetailsComponent } from './brands/brands-details/brands-details.component';
 
 @NgModule({
     declarations: [
@@ -42,7 +44,9 @@ import { BrandsComponent } from './brands/brands.component';
         AuthDeveloperComponent,
         OffersListComponent,
         OffersDetailsComponent,
-        BrandsComponent
+        BrandsComponent,
+        BrandsListComponent,
+        BrandsDetailsComponent
     ],
   imports: [
     BrowserModule,

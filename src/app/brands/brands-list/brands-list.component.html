@@ -1,0 +1,20 @@
+<div class="brand-items" *ngFor="let offer of offers">
+  <div class="company-tile">
+    <div class="background-image">
+      <img class="picture" [src]= "offer.picture" alt="{{ offer.companyName }}">
+    </div>
+    <div class="company-info">
+      <div class="basic-info">
+        <div class="name">
+          {{ offer.companyName }}
+        </div>
+        <div class="type">
+          <mat-icon>home</mat-icon><span> Software house</span>
+        </div>
+      </div>
+      <div class="logo-company">
+        <img class="picture" [src]= "offer.logo" alt="{{ offer.companyName }}">
+      </div>
+    </div>
+  </div>
+</div>
