@@ -1,0 +1,24 @@
+<div class="row">
+  <a class="column left" *ngFor="let offer of offers">
+    <div class="brand-items">
+      <div class="company-tile">
+        <div class="background-image">
+          <img class="picture" [src]= "offer.picture" alt="{{ offer.companyName }}">
+        </div>
+        <div class="company-info">
+          <div class="basic-info">
+            <div class="name">
+              {{ offer.companyName }}
+            </div>
+            <div class="type">
+              <mat-icon>home</mat-icon><span> Software house</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+  <div class="column right">
+    <app-map></app-map>
+  </div>
+</div>

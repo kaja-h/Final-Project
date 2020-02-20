@@ -27,6 +27,7 @@ import { OffersListComponent } from './main/body/offers/offers-list/offers-list.
 import { OffersDetailsComponent } from './main/body/offers/offers-details/offers-details.component';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatSliderModule} from "@angular/material/slider";
+import { BrandsComponent } from './brands/brands.component';
 
 @NgModule({
     declarations: [
@@ -40,7 +41,8 @@ import {MatSliderModule} from "@angular/material/slider";
         AuthEmployerComponent,
         AuthDeveloperComponent,
         OffersListComponent,
-        OffersDetailsComponent
+        OffersDetailsComponent,
+        BrandsComponent
     ],
   imports: [
     BrowserModule,

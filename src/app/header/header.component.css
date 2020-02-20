@@ -26,6 +26,7 @@ body {
   color: grey;
   text-decoration: none;
   font-size: 17px;
+  cursor: pointer;
 }
 .header span:hover {
   color:hotpink;
