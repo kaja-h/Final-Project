@@ -1,23 +1,20 @@
 * {
   box-sizing: border-box;
 }
-.column {
+.column2 {
   float: left;
   padding: 10px;
 }
-.left {
+.left2 {
   width: 60%;
   background-color: #f3f6f8;
   overflow-y: scroll;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   position: fixed;
   top: 190px;
   bottom: 0;
   left: 0;
 }
-.right {
+.right2 {
   width: 40%;
   background-color: #f3f6f8;
   position: fixed;
@@ -25,42 +22,4 @@
   bottom: 0;
   right: 0;
 }
-.brand-items {
-  /*margin-left: auto;*/
-  /*margin-right: auto;*/
-  /*margin-bottom: 20px;*/
-}
-.company-tile {
-  border-radius: 5px;
-  width: 270px;
-  height: 200px;
-  /*overflow: hidden;*/
-  background: #FFF;
-  display: block;
-  color: #37474f;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05), 0 1px 5px 0 rgba(0,0,0,0.04);
-  padding: 0;
-}
-.company-tile .picture {
-  height: 135px;
-  width: 270px;
-}
-.company-tile .basic-info {
-  min-width: 50px;
-  margin-right: 5px;
-  margin-left: 10px;
-}
-.company-tile .basic-info .text {
-  font-size: 18px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.company-tile .basic-info .type {
-  vertical-align: text-bottom;
-  color: #99a1ab;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  padding-bottom: 3px;
-}
+
