@@ -1,0 +1,53 @@
+.brand-details {
+  padding: 0 15px 15px 15px;
+}
+.brands-background {
+  position: relative;
+}
+.brands-background .back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 30px;
+  background-color: rgba(0,0,0,0.35);
+  border-radius: 5px;
+  padding: 5px;
+}
+.brands-background img {
+  height: 500px;
+  width: 800px;
+  border-radius: 5px;
+}
+.brands-background .description {
+  color: white;
+  font-size: 15px;
+  font-weight: normal;
+  padding: 0;
+  position: absolute;
+  bottom: 150px;
+  left: 20px;
+}
+.brands-background .heading {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+.brands-background .heading .title {
+  font-size: 32px;
+  display: inline-block;
+}
+.brands-background .heading .social-media {
+  text-align: center;
+  margin-left: 180px;
+  display: inline-block;
+}
+.brands-background .heading .social-media i {
+  color: white;
+  margin-right: 10px;
+  vertical-align: middle;
+  font-size: 30px;
+  border-radius: 50%;
+  border: white 1px;
+}

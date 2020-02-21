@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Offers} from '../../main/body/offers/offers.model';
+import {OffersService} from '../../main/body/offers/offers.service';
 
 @Component({
   selector: 'app-brands-details',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./brands-details.component.css']
 })
 export class BrandsDetailsComponent implements OnInit {
+  @Input() offers: Offers[];
 
-  constructor() { }
+  constructor(private offersService: OffersService) { }
 
   ngOnInit() {
+    this.offers = this.offersService.getOffers();
   }
 
 }

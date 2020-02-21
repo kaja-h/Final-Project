@@ -1,6 +1,7 @@
 <div class="row2">
   <div class="column2 left2">
-    <app-brands-list></app-brands-list>
+    <app-brands-list *ngIf="router.url !== '/brands/details'"></app-brands-list>
+    <router-outlet></router-outlet>
   </div>
   <div class="column2 right2">
     <app-map></app-map>

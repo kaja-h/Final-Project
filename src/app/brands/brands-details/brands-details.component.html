@@ -1,1 +1,16 @@
-<p>brands-details works!</p>
+<div class="brand-details" *ngFor="let offer of offers">
+  <div class="brands-background" >
+    <img class="br-picture" [src]= "offer.picture" alt="{{ offer.companyName }}">
+    <a routerLink="/brands"><mat-icon class="back">arrow_back</mat-icon></a>
+    <div class="description">
+      <div class="heading">
+        <div class="title">About us</div>
+        <div class="social-media">
+          <i class="fas fa-globe-africa"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
