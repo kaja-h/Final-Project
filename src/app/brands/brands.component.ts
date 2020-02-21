@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {OffersService} from '../main/body/offers/offers.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-brands',
@@ -9,7 +10,7 @@ import {OffersService} from '../main/body/offers/offers.service';
 })
 export class BrandsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }

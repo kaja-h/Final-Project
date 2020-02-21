@@ -1,5 +1,5 @@
 <div class="brand-items" *ngFor="let offer of offers">
-  <div class="company-tile">
+  <a class="company-tile" routerLink="/brands/details">
     <div class="background-image">
       <img class="picture" [src]= "offer.picture" alt="{{ offer.companyName }}">
     </div>
@@ -16,5 +16,5 @@
         <img class="picture" [src]= "offer.logo" alt="{{ offer.companyName }}">
       </div>
     </div>
-  </div>
+  </a>
 </div>

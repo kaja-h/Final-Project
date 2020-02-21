@@ -3,14 +3,15 @@
   margin-right: 9px;
   margin-bottom: 20px;
   display: inline-block;
+  background-color: #FFF;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05), 0 1px 5px 0 rgba(0,0,0,0.04);
 }
 .company-tile {
-  border-radius: 5px;
   width: 270px;
   height: 200px;
-  background: #FFF;
   color: #37474f;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05), 0 1px 5px 0 rgba(0,0,0,0.04);
+  text-decoration: none;
 }
 .company-tile .picture {
   height: 135px;
