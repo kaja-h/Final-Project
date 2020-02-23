@@ -1,4 +1,4 @@
-<a class="offers" *ngFor="let offer of offers; let i = index" [routerLink]=[i]>
+<a class="offers" *ngFor="let offer of offers; let i = index" [routerLink]="['details', i]">
   <div class="offer-item">
     <div class="item">
       <div class="company-logo">
