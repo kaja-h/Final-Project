@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import * as L from 'leaflet';
 import {Offers} from '../offers/offers.model';
 import {OffersService} from '../offers/offers.service';
+import {ActivatedRoute, Params} from '@angular/router';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -26,14 +27,24 @@ L.Marker.prototype.options.icon = iconDefault;
 })
 
 export class MapComponent implements OnInit {
-  @Input() offers: Offers[];
+  offer: Offers;
   private map;
 
-  constructor(private offersService: OffersService) {
+  constructor(private offersService: OffersService,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.initMap();
+    // this.route.params
+    //   .subscribe(
+    //     (params: Params) => {
+    //     const lat = this.offer.geo1;
+    //     const lng = this.offer.geo2;
+    //     const marker = L.marker([lat, lng]);
+    //     marker.addTo(this.map);
+    //     }
+    //   );
   }
 
   private initMap(): void {
