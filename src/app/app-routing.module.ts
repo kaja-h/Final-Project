@@ -16,7 +16,7 @@ const appRoutes: Routes = [
   { path: 'users', component: AuthEmployerComponent },
   { path: 'devs', component: AuthDeveloperComponent },
   { path: 'brands', component: BrandsComponent, children: [
-      { path: 'details', component: BrandsDetailsComponent }
+      { path: ':id', component: BrandsDetailsComponent }
     ] }
 ];
 

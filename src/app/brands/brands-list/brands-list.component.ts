@@ -9,11 +9,11 @@ import {OffersService} from '../../main/body/offers/offers.service';
 })
 export class BrandsListComponent implements OnInit {
   @Input() offers: Offers[];
+  @Input() index: number;
 
   constructor(private offersService: OffersService) { }
 
   ngOnInit() {
     this.offers = this.offersService.getOffers();
   }
-
 }
