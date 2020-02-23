@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Offers} from '../../main/body/offers/offers.model';
 import {OffersService} from '../../main/body/offers/offers.service';
+import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-brands-details',
@@ -8,12 +9,20 @@ import {OffersService} from '../../main/body/offers/offers.service';
   styleUrls: ['./brands-details.component.css']
 })
 export class BrandsDetailsComponent implements OnInit {
-  @Input() offers: Offers[];
+  offer: Offers;
+  id: number;
 
-  constructor(private offersService: OffersService) { }
+  constructor(private offersService: OffersService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.offers = this.offersService.getOffers();
+    this.route.params
+      .subscribe(
+        (params: Params) => {
+          this.id = +params['id'];
+          this.offer = this.offersService.getOffer(this.id);
+        }
+      );
   }
 
 }
