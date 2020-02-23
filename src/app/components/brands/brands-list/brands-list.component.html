@@ -1,5 +1,5 @@
 <div class="brand-items" *ngFor="let offer of offers  let i = index">
-  <a class="company-tile" [routerLink]="[i]">
+  <a class="company-tile" [routerLink]="['details', i]">
     <div class="background-image">
       <img class="picture" [src]= "offer.picture" alt="{{ offer.companyName }}">
     </div>

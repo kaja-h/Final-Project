@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import * as L from 'leaflet';
 import {Offers} from '../offers/offers.model';
-import {OffersService} from "../offers/offers.service";
+import {OffersService} from '../offers/offers.service';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
