@@ -13,11 +13,11 @@ export class Offers {
   public description: string;
   public requirement: string;
   public reqLVL: string;
-  public geo1: object;
-  public geo2: object;
+  public geo1: number;
+  public geo2: number;
   public picture: string;
 
-  constructor(name: string, salary: string, age: string, companyName: string, companyAddress: string, tags: string, logo: string, salaryMonth: string, companySize: string, empType: string, level: string, description: string, requirement: string, reqLVL: string, geo1: object, geo2: object, picture: string) {
+  constructor(name: string, salary: string, age: string, companyName: string, companyAddress: string, tags: string, logo: string, salaryMonth: string, companySize: string, empType: string, level: string, description: string, requirement: string, reqLVL: string, geo1: number, geo2: number, picture: string) {
     this.name = name;
     this.salary = salary;
     this.age = age;
