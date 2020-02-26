@@ -33,6 +33,7 @@ import {BrandsListComponent} from './components/brands/brands-list/brands-list.c
 import { MocksComponent } from './mocks/mocks.component';
 import { ServicesComponent } from './services/services.component';
 import { HelpersComponent } from './helpers/helpers.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -55,24 +56,25 @@ import { HelpersComponent } from './helpers/helpers.component';
         ServicesComponent,
         HelpersComponent
     ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatListModule,
-    MatButtonModule,
-    MatMenuModule,
-    RouterModule,
-    AppRoutingModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatInputModule,
-    MatIconModule,
-    MatCheckboxModule,
-    MatSlideToggleModule,
-    MatSliderModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatListModule,
+        MatButtonModule,
+        MatMenuModule,
+        RouterModule,
+        AppRoutingModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatInputModule,
+        MatIconModule,
+        MatCheckboxModule,
+        MatSlideToggleModule,
+        MatSliderModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -13,11 +13,10 @@ export class Offers {
   public description: string;
   public requirement: string;
   public reqLVL: string;
-  public geo1: number;
-  public geo2: number;
+  public geo: object;
   public picture: string;
 
-  constructor(name: string, salary: string, age: string, companyName: string, companyAddress: string, tags: string, logo: string, salaryMonth: string, companySize: string, empType: string, level: string, description: string, requirement: string, reqLVL: string, geo1: number, geo2: number, picture: string) {
+  constructor(name: string, salary: string, age: string, companyName: string, companyAddress: string, tags: string, logo: string, salaryMonth: string, companySize: string, empType: string, level: string, description: string, requirement: string, reqLVL: string, geo: object, picture: string) {
     this.name = name;
     this.salary = salary;
     this.age = age;
@@ -32,8 +31,7 @@ export class Offers {
     this.description = description;
     this.requirement = requirement;
     this.reqLVL = reqLVL;
-    this.geo1 = geo1;
-    this.geo2 = geo2;
+    this.geo = geo;
     this.picture = picture;
   }
 }
