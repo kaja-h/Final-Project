@@ -29,6 +29,7 @@ L.Marker.prototype.options.icon = iconDefault;
 export class MapComponent implements OnInit {
   offer: Offers;
   private map;
+  private marker;
 
   constructor(private offersService: OffersService,
               private route: ActivatedRoute) {
@@ -36,15 +37,7 @@ export class MapComponent implements OnInit {
 
   ngOnInit(): void {
     this.initMap();
-    // this.route.params
-    //   .subscribe(
-    //     (params: Params) => {
-    //     const lat = this.offer.geo1;
-    //     const lng = this.offer.geo2;
-    //     const marker = L.marker([lat, lng]);
-    //     marker.addTo(this.map);
-    //     }
-    //   );
+    // this.makeMarkers(this.map);
   }
 
   private initMap(): void {
@@ -61,4 +54,15 @@ export class MapComponent implements OnInit {
     const marker = L.marker([51.75, 19.45]);
     marker.addTo(this.map);
   }
+  // private makeMarkers(map: L.map): void {
+  //   this.route.params
+  //     .subscribe(
+  //       (params: Params) => {
+  //         const lat = this.offer.geo[0];
+  //         const lng = this.offer.geo[1];
+  //         this.marker = L.marker([lat, lng]);
+  //         this.marker.addTo(this.map);
+  //       }
+  //     );
+  // }
 }
