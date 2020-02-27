@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import * as L from 'leaflet';
 import {Offers} from '../offers/offers.model';
 import {OffersService} from '../offers/offers.service';
-import {ActivatedRoute, Params} from '@angular/router';
+import {ActivatedRoute, Params, Route} from '@angular/router';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -27,7 +27,7 @@ L.Marker.prototype.options.icon = iconDefault;
 })
 
 export class MapComponent implements OnInit {
-  offer: Offers;
+  offers: Offers[];
   private map;
   private marker;
 
@@ -58,10 +58,12 @@ export class MapComponent implements OnInit {
   //   this.route.params
   //     .subscribe(
   //       (params: Params) => {
-  //         const lat = this.offer.geo[0];
-  //         const lng = this.offer.geo[1];
-  //         this.marker = L.marker([lat, lng]);
-  //         this.marker.addTo(this.map);
+  //         for (const offer of this.offers) {
+  //           const lat = this.offer.geo;
+  //           const lng = this.offer.geo[1];
+  //           this.marker = L.marker([lat, lng]);
+  //           this.marker.addTo(this.map);
+  //         }
   //       }
   //     );
   // }
