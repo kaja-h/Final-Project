@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Offers} from '../offers.model';
-import {OffersService} from '../offers.service';
+import {OffersInterface, OffersMocks} from '../../../../../mocks/offers-mocks';
 
 @Component({
   selector: 'app-offers-list',
@@ -8,12 +7,12 @@ import {OffersService} from '../offers.service';
   styleUrls: ['./offers-list.component.css']
 })
 export class OffersListComponent implements OnInit {
-  @Input() offers: Offers[];
+  @Input() offers: OffersInterface[];
   @Input() index: number;
-  constructor(private offersService: OffersService) {
+  constructor(private offersMocks: OffersMocks) {
   }
 
   ngOnInit() {
-    this.offers = this.offersService.getOffers();
+    this.offers = this.offersMocks.getOffers();
   }
 }
