@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {OffersService} from './offers.service';
 import {Router} from '@angular/router';
 import {OffersMocks} from '../../../../mocks/offers-mocks';
 
@@ -7,7 +6,7 @@ import {OffersMocks} from '../../../../mocks/offers-mocks';
   selector: 'app-offers',
   templateUrl: './offers.component.html',
   styleUrls: ['./offers.component.css'],
-  providers: [OffersService, OffersMocks]
+  providers: [OffersMocks]
 })
 export class OffersComponent implements OnInit {
 

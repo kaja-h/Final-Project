@@ -1,3 +1,5 @@
+import * as L from 'leaflet';
+
 export interface OffersInterface {
   name: string;
   salary: string;
@@ -16,8 +18,6 @@ export interface OffersInterface {
   geo: object;
   picture: string;
 }
-
-
 // tslint:disable-next-line:max-line-length
 const description = 'Atende Software Sp. z o.o. jest spółką z grupy kapitałowej Atende S.A., odpowiedzialną za tworzenie i rozwój oprogramowania przeznaczonego dla rynku multimedialnego, telekomunikacyjnego i sektora energetyki. W związku z rozwojem firmy, poszukujemy osoby na stanowisko: PROGRAMISTA JAVA Opis stanowiska: W Atende Software rozwijamy największą w kraju platformę technologiczną dla telewizji internetowej - redGalaxy. Z redGalaxy korzystają największe i najpopularniejsze w Polsce telewizje internetowe, takie jak player.pl, czy playnow.pl. Miliony użytkowników tych portali, dzięki naszej technologii, każdego dnia może cieszyć się dostępem do ulubionych treści wideo. Stworzone przez nas aplikacje mobilne od wielu miesięcy utrzymują się na czołowych miejscach popularności, zarówno w sklepie Google Play, jak i Apple Appstore.'
 
@@ -35,7 +35,7 @@ export class OffersMocks {
       companySize: '15-30',
       empType: 'B2B',
       level: 'Mid',
-      description: description,
+      description,
       requirement: 'React, Java, Angular',
       reqLVL: 'Regular, Advanced, Basic',
       geo: {lat: 50.078144249999994, lon: 19.995012647159186},
@@ -53,7 +53,7 @@ export class OffersMocks {
       companySize: '15-30',
       empType: 'B2B',
       level: 'Senior',
-      description: description,
+      description,
       requirement: 'C++, Java',
       reqLVL: 'Advanced, Regular',
       geo: {lat: 50.078144249999994, lon: 19.995012647159186},
@@ -71,7 +71,7 @@ export class OffersMocks {
       companySize: '100-300',
       empType: 'Permanent',
       level: 'Mid/Senior',
-      description: description,
+      description,
       requirement: 'PHP, JavaScript',
       reqLVL: 'Advanced, Regular',
       geo: {lat: 52.2317318, lon: 21.0172183},
@@ -89,7 +89,7 @@ export class OffersMocks {
       companySize: '300-500',
       empType: 'Part-time',
       level: 'Senior',
-      description: description,
+      description,
       requirement: 'PHP, mySQL',
       reqLVL: 'Advanced, Advanced',
       geo: {lat: 51.13107515, lon: 16.96240609525885},
@@ -107,7 +107,7 @@ export class OffersMocks {
       companySize: '100-200',
       empType: 'B2B',
       level: 'Mid',
-      description: description,
+      description,
       requirement: 'HTML, CSS3, JavaScript',
       reqLVL: 'Regular, Regular, Basic',
       geo: {lat: 53.1234006, lon: 23.124264850000003},
@@ -125,7 +125,7 @@ export class OffersMocks {
       companySize: '200-400',
       empType: 'B2B',
       level: 'Mid',
-      description: description,
+      description,
       requirement: 'HTML, CSS3, JavaScript, Angular',
       reqLVL: 'Advanced, Advanced, Regular, Basic',
       geo: {lat: 52.414374249999995, lon: 16.960921681908395},
@@ -143,7 +143,7 @@ export class OffersMocks {
       companySize: '200-400',
       empType: 'B2B',
       level: 'Junior',
-      description: description,
+      description,
       requirement: 'JavaScript, Python',
       reqLVL: 'Regular, Regular',
       geo: {lat: 52.414374249999995, lon: 16.960921681908395},
@@ -158,4 +158,21 @@ export class OffersMocks {
   getOffer(index: number) {
     return this.offers.slice()[index];
   }
+
+  getMarker(map: L.map): void {
+    const list1 = this.offers.map((item) => {
+      return item.geo;
+    });
+    list1.forEach(element => {
+      // @ts-ignore
+      const mapX = element.lat;
+      // @ts-ignore
+      const mapY = element.lon;
+      const marker = L.marker([mapX, mapY]);
+      marker.addTo(map);
+    });
+  }
 }
+
+
+
