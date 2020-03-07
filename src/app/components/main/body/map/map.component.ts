@@ -1,8 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import * as L from 'leaflet';
-import {Offers} from '../offers/offers.model';
-import {OffersService} from '../offers/offers.service';
-import {ActivatedRoute, Params, Route} from '@angular/router';
+import {OffersInterface, OffersMocks} from '../../../../mocks/offers-mocks';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -23,21 +21,20 @@ L.Marker.prototype.options.icon = iconDefault;
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css'],
-  providers: [OffersService]
+  providers: [OffersMocks]
 })
 
 export class MapComponent implements OnInit {
-  offers: Offers[];
   private map;
   private marker;
+  offers: OffersInterface[];
 
-  constructor(private offersService: OffersService,
-              private route: ActivatedRoute) {
+  constructor(private offersMocks: OffersMocks) {
   }
 
   ngOnInit(): void {
     this.initMap();
-    // this.makeMarkers(this.map);
+    this.offersMocks.getMarker(this.map);
   }
 
   private initMap(): void {
@@ -50,21 +47,5 @@ export class MapComponent implements OnInit {
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
     tiles.addTo(this.map);
-
-    const marker = L.marker([51.75, 19.45]);
-    marker.addTo(this.map);
   }
-  // private makeMarkers(map: L.map): void {
-  //   this.route.params
-  //     .subscribe(
-  //       (params: Params) => {
-  //         for (const offer of this.offers) {
-  //           const lat = this.offer.geo;
-  //           const lng = this.offer.geo[1];
-  //           this.marker = L.marker([lat, lng]);
-  //           this.marker.addTo(this.map);
-  //         }
-  //       }
-  //     );
-  // }
 }

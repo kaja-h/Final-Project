@@ -33,7 +33,8 @@ import {BrandsListComponent} from './components/brands/brands-list/brands-list.c
 import { MocksComponent } from './mocks/mocks.component';
 import { ServicesComponent } from './services/services.component';
 import { HelpersComponent } from './helpers/helpers.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import {FormsModule} from "@angular/forms";
         BrandsDetailsComponent,
         MocksComponent,
         ServicesComponent,
-        HelpersComponent
+        HelpersComponent,
+        FilterPipe
     ],
     imports: [
         BrowserModule,
