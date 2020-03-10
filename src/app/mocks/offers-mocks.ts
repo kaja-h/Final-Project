@@ -19,7 +19,7 @@ export interface OffersInterface {
   picture: string;
 }
 // tslint:disable-next-line:max-line-length
-const description = 'Atende Software Sp. z o.o. jest spółką z grupy kapitałowej Atende S.A., odpowiedzialną za tworzenie i rozwój oprogramowania przeznaczonego dla rynku multimedialnego, telekomunikacyjnego i sektora energetyki. W związku z rozwojem firmy, poszukujemy osoby na stanowisko: PROGRAMISTA JAVA Opis stanowiska: W Atende Software rozwijamy największą w kraju platformę technologiczną dla telewizji internetowej - redGalaxy. Z redGalaxy korzystają największe i najpopularniejsze w Polsce telewizje internetowe, takie jak player.pl, czy playnow.pl. Miliony użytkowników tych portali, dzięki naszej technologii, każdego dnia może cieszyć się dostępem do ulubionych treści wideo. Stworzone przez nas aplikacje mobilne od wielu miesięcy utrzymują się na czołowych miejscach popularności, zarówno w sklepie Google Play, jak i Apple Appstore.'
+const description = 'Atende Software Sp. z o.o. jest spółką z grupy kapitałowej Atende S.A., odpowiedzialną za tworzenie i rozwój oprogramowania przeznaczonego dla rynku multimedialnego, telekomunikacyjnego i sektora energetyki. W związku z rozwojem firmy, poszukujemy osoby na stanowisko: PROGRAMISTA JAVA Opis stanowiska: W Atende Software rozwijamy największą w kraju platformę technologiczną dla telewizji internetowej - redGalaxy. Z redGalaxy korzystają największe i najpopularniejsze w Polsce telewizje internetowe, takie jak player.pl, czy playnow.pl. Miliony użytkowników tych portali, dzięki naszej technologii, każdego dnia może cieszyć się dostępem do ulubionych treści wideo. Stworzone przez nas aplikacje mobilne od wielu miesięcy utrzymują się na czołowych miejscach popularności, zarówno w sklepie Google Play, jak i Apple Appstore.';
 
 export class OffersMocks {
   offers: OffersInterface[] = [
@@ -66,6 +66,7 @@ export class OffersMocks {
       companyName: 'Flying Bisons',
       companyAddress: 'ul. Bracka 18, Warszawa',
       tags: 'mysql/php',
+      // tslint:disable-next-line:max-line-length
       logo: 'https://media-exp1.licdn.com/dms/image/C510BAQHW08_IyDfpnQ/company-logo_200_200/0?e=2159024400&v=beta&t=eQYa88eU4P3s987AR2VJI9l3SbS-gifo3wcFHnak8aU',
       salaryMonth: 'gross/month',
       companySize: '100-300',
@@ -84,6 +85,7 @@ export class OffersMocks {
       companyName: 'ValueLogic Sp. z.o.o.',
       companyAddress: 'ul. Szybowcowa 31, Wrocław',
       tags: 'react/angularjs/angular',
+      // tslint:disable-next-line:max-line-length
       logo: 'https://media-exp1.licdn.com/dms/image/C4E0BAQG34mlhZgUppg/company-logo_200_200/0?e=2159024400&v=beta&t=lIPy-YAbfTq7n5p-AiTtuf7lgWaLSdM-6Zb167zGm3c',
       salaryMonth: 'gross/month',
       companySize: '300-500',
@@ -159,16 +161,27 @@ export class OffersMocks {
     return this.offers.slice()[index];
   }
 
+  makePopup(offer: any): string {
+    return `` +
+      `<div> ${offer.name}</div>` +
+      `<div> ${offer.salary}</div>` +
+      `<div> ${offer.companyName}</div>`;
+  }
+
   getMarker(map: L.map): void {
-    const list1 = this.offers.map((item) => {
-      return item.geo;
-    });
-    list1.forEach(element => {
+    this.offers.map((item) => {
       // @ts-ignore
-      const mapX = element.lat;
+      const mapX = item.geo.lat;
       // @ts-ignore
-      const mapY = element.lon;
+      const mapY = item.geo.lon;
       const marker = L.marker([mapX, mapY]);
+      marker.bindPopup(this.makePopup(item));
+      marker.on('mouseover', function(e) {
+        this.openPopup();
+      });
+      marker.on('mouseout', function(e) {
+        this.closePopup();
+      });
       marker.addTo(map);
     });
   }
