@@ -185,6 +185,16 @@ export class OffersMocks {
       marker.addTo(map);
     });
   }
+
+  zoomOnClick(map: L.map) {
+    this.offers.map((city) => {
+      // @ts-ignore
+      const lat = city.geo.lat;
+      // @ts-ignore
+      const lng = city.geo.lon;
+      map.panTo(new L.LatLng(lat, lng));
+    });
+  }
 }
 
 

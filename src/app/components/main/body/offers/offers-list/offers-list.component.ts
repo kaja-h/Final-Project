@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {OffersInterface, OffersMocks} from '../../../../../mocks/offers-mocks';
 
+
 @Component({
   selector: 'app-offers-list',
   templateUrl: './offers-list.component.html',
