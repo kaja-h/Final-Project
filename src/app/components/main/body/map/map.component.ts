@@ -26,7 +26,6 @@ L.Marker.prototype.options.icon = iconDefault;
 
 export class MapComponent implements OnInit {
   private map;
-  private marker;
   offers: OffersInterface[];
 
   constructor(private offersMocks: OffersMocks) {
