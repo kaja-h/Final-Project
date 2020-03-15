@@ -182,7 +182,10 @@ export class OffersMocks {
       marker.on('mouseout', function(e) {
         this.closePopup();
       });
-      marker.addTo(map);
+      marker.addTo(map).on('click', markerOnClick);
+      function markerOnClick(e) {
+        console.log(e.latlng);
+      }
     });
   }
 
