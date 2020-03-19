@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import * as L from 'leaflet';
-import {OffersInterface, OffersMocks} from '../../../../mocks/offers-mocks';
+import {MapService} from './map.service';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -20,20 +20,18 @@ L.Marker.prototype.options.icon = iconDefault;
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.css'],
-  providers: [OffersMocks]
+  styleUrls: ['./map.component.css']
 })
 
-export class MapComponent implements OnInit {
+export class MapComponent implements AfterViewInit {
   private map;
-  offers: OffersInterface[];
 
-  constructor(private offersMocks: OffersMocks) {
+  constructor(private mapService: MapService) {
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.initMap();
-    this.offersMocks.getMarker(this.map);
+    this.mapService.getMarker(this.map);
   }
 
   private initMap(): void {
