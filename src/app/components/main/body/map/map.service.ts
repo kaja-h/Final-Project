@@ -6,7 +6,6 @@ import * as L from 'leaflet';
   providedIn: 'root'
 })
 
-
 export class MapService {
   @Input() offers: OffersInterface[];
 

@@ -1,5 +1,3 @@
-import * as L from 'leaflet';
-
 export interface OffersInterface {
   name: string;
   salary: string;
@@ -159,16 +157,6 @@ export class OffersMocks {
 
   getOffer(index: number) {
     return this.offers.slice()[index];
-  }
-
-  zoomOnClick(map: L.map) {
-    this.offers.map((city) => {
-      // @ts-ignore
-      const lat = city.geo.lat;
-      // @ts-ignore
-      const lng = city.geo.lon;
-      map.panTo(new L.LatLng(lat, lng));
-    });
   }
 }
 
