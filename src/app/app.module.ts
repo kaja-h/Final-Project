@@ -35,6 +35,8 @@ import { ServicesComponent } from './services/services.component';
 import { HelpersComponent } from './helpers/helpers.component';
 import {FormsModule} from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
+import {MapService} from './components/main/body/map/map.service';
+import {OffersMocks} from './mocks/offers-mocks';
 
 
 @NgModule({
@@ -77,7 +79,7 @@ import { FilterPipe } from './filter.pipe';
         MatSliderModule,
         FormsModule
     ],
-  providers: [],
+  providers: [MapService, OffersMocks],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

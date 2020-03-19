@@ -161,34 +161,6 @@ export class OffersMocks {
     return this.offers.slice()[index];
   }
 
-  makePopup(offer: any): string {
-    return `` +
-      `<div> ${offer.name}</div>` +
-      `<div> ${offer.salary}</div>` +
-      `<div> ${offer.companyName}</div>`;
-  }
-
-  getMarker(map: L.map): void {
-    this.offers.map((item) => {
-      // @ts-ignore
-      const mapX = item.geo.lat;
-      // @ts-ignore
-      const mapY = item.geo.lon;
-      const marker = L.marker([mapX, mapY]);
-      marker.bindPopup(this.makePopup(item));
-      marker.on('mouseover', function(e) {
-        this.openPopup();
-      });
-      marker.on('mouseout', function(e) {
-        this.closePopup();
-      });
-      marker.addTo(map).on('click', markerOnClick);
-      function markerOnClick(e) {
-        console.log(e.latlng);
-      }
-    });
-  }
-
   zoomOnClick(map: L.map) {
     this.offers.map((city) => {
       // @ts-ignore
