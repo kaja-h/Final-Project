@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, Input} from '@angular/core';
 import * as L from 'leaflet';
 import {MapService} from './map.service';
 
@@ -44,5 +44,17 @@ export class MapComponent implements AfterViewInit {
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
     tiles.addTo(this.map);
+  }
+
+  ngDoCheck(): void {
+    this.zoomMap();
+  }
+
+  public zoomMap() {
+    const offer = this.mapService.myOffer;
+    if (!offer) {
+      return;
+    }
+    this.map.setView([offer.geo.lat, offer.geo.lon], 10);
   }
 }

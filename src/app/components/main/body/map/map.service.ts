@@ -8,6 +8,7 @@ import * as L from 'leaflet';
 
 export class MapService {
   @Input() offers: OffersInterface[];
+  public myOffer: any;
 
   constructor(private offersMocks: OffersMocks) {
   }
